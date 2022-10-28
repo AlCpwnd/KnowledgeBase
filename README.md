@@ -7,6 +7,7 @@ Random Collection of knowledge
 > [Source](https://ugetfix.com/ask/how-to-fix-dism-error-0x800f081f-in-windows/)
 
 Steps to follow in case neither `SFC /SCANNOW` and `DISM /Online /Cleanup-Image /RestoreHealth` fail to repair the system files.
+
 0. (Optional) Download the ISO file corresponding to the OS you want to repair
 1. Mount the ISO file within the operating system you are trying to repair
 2. Find the "Install.*" file within the "source" folder of your mounted image.
