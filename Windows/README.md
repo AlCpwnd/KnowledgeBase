@@ -8,3 +8,6 @@ Instructions regarding the repair of an OS using DISM and a connected ISO.
 
 ## Group Policy processing failure
 When a computer fails to update their local group policies because of a corrupted local file.
+
+## DC Private Network
+When your domain controller's network adapter is stuck on the 'Private Network' configuration.

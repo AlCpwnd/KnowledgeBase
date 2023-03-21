@@ -12,6 +12,7 @@ Each subfolder contains a README.md with more detailed information regarding its
 
 ---
 ## Windows
+- [DC Private Network](Windows/DC%20Private%20Network.md)
 - [DISM Offline Repair](Windows/DISM%20Offline%20Repair.md)
 - [DFS Replication Errors](Windows/DFS%20Replication%20errors.md)
 - [GPO Processing Failure](Windows/GPO%20processing%20failure.md)
