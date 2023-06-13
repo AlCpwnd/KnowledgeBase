@@ -14,3 +14,16 @@
    msDFSR-Enabled=TRUE  
 7. Run `repadmin /syncall /Adp`
 8. Run `DFSRDIAG POLLAD`
+
+## 'DFSRDIAG' not recognised
+> [source](https://www.alitajran.com/dfsrdiag-pollad-is-not-recognized/)
+
+### Server Manager
+Add server feature:
+`Remote Server Administration Tools > Role Administrations Tools > File Services Tools > DFS Management Tools`
+
+### PowerShell
+> Run as admin
+```ps
+Install-WindowsFeature -Name 'RSAT-DFS-Mgmt-Con'
+```
