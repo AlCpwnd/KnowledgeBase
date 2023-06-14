@@ -15,6 +15,6 @@ Steps to follow in case neither `SFC /SCANNOW` and `DISM /Online /Cleanup-Image 
 
 Alternitively, you can run:
 ```
-DISM /Online /Cleanup-Image /RestoreHealth /Source:WIM:c:\\install.wesdim:X /LimitAccess
+DISM /Online /Cleanup-Image /RestoreHealth /Source:WIM:c:\\install.wim:X /LimitAccess
 ```
 Where `X` is the index previously found in stop 2.3 .
