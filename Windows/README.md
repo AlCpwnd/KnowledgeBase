@@ -1,5 +1,8 @@
 # Windows knowledge
 
+## Failed to create Connexant Audio Factory
+Recurring issue on some HP devices with drivers installation failure.
+
 ## DFS Replication Errors
 Solution related to the DFSR Event ID 4012, where a server failed to sync with a local SYSVOL folder.
 
