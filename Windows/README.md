@@ -17,3 +17,6 @@ When a computer fails to update their local group policies because of a corrupte
 
 ## DC Private Network
 When your domain controller's network adapter is stuck on the 'Private Network' configuration.
+
+## Azure AD Sync Link fail
+When some users fail to link up with their online counterpart after configuring the Azure AD Sync.
