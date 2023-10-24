@@ -1,4 +1,5 @@
 # KnowledgeBase
+
 Random Collection of knowledge
 
 ---
@@ -8,10 +9,13 @@ Each subfolder contains a README.md with more detailed information regarding its
 ---
 
 ## VMware
+
 - [ESXI Update](VMware/EsxiUpdate.md)
 
 ---
+
 ## Windows
+
 - [Azure AD Sync Link fail](Windows/Azure%20AD%20Sync%20Lync%20fail.md)
 - [Conexant Audio Factory issues](Windows/Failed%20to%20create%20Conexant%20Audio%20Factory.md)
 - [DC Private Network](Windows/DC%20Private%20Network.md)
