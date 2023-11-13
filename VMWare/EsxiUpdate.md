@@ -28,5 +28,5 @@ This procedure goes over the steps requires to install the **ESXI Offline Bundle
   ```
 
 10. Run the following command with the profile name found in step `9.`:
-  `esxcli software update -d <Full path to the update ZIP file> -p <Profile name>`
+  `esxcli software profile update -d <Full path to the update ZIP file> -p <Profile name>`
 11. Restart the host: `reboot`
