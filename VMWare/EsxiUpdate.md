@@ -16,7 +16,7 @@ This procedure goes over the steps requires to install the **ESXI Offline Bundle
   `esxcli software sources profile list -d <Full path to the update ZIP file>`
 9. Choose the corresponding not-security only, standard update:
   In the example below:
-  `ESXi-ESXi-7.0U3sl` : The `s` before the version (`l`) stands for security. Therefore not the version we want.
+  `ESXi-ESXi-7.0U3sl` : The `s` before the version (`l`) stands for security and contains only the security updates (Not the feature updates), therefore not the version we want.
 
   ```bash
   Name                            Vendor        Acceptance Level  Creation Time        Modification Time
