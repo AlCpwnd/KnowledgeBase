@@ -1,4 +1,5 @@
 # DISM Offline Repair
+>
 > [Source](https://ugetfix.com/ask/how-to-fix-dism-error-0x800f081f-in-windows/)
 
 Steps to follow in case neither `SFC /SCANNOW` and `DISM /Online /Cleanup-Image /RestoreHealth` fail to repair the system files.
@@ -14,7 +15,9 @@ Steps to follow in case neither `SFC /SCANNOW` and `DISM /Online /Cleanup-Image 
 4. End by running `SFC /SCANNOW` and restarting if needed.
 
 Alternitively, you can run:
-```
+
+```bat
 DISM /Online /Cleanup-Image /RestoreHealth /Source:WIM:c:\\install.wim:X /LimitAccess
 ```
-Where `X` is the index previously found in stop 2.3 .
+
+Where `X` is the index previously found in step 2.3 .

@@ -1,7 +1,9 @@
 # Domain Controller: Private network connection
+
 Possible solutions for when a domain controller's network connection changes to Private or Public.
 
 ## Modifying Network Location Awareness service dependencies
+>
 > [Source](https://freddejonge.nl/windows-server-2019-domain-controller-keeps-network-on-private/)
 
 1. Open the registry editor. `Regedit`
