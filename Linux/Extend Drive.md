@@ -63,7 +63,7 @@ This procedures describes the steps needed to extend the drive on a Linux Ubuntu
 
 9. Run `lvresize --extents +100%FREE --resizefs /pathnoted/inpreviousstep` in order to extend the file structure.
 
-    a. You may get the following warning, this means you'll need to update the size of the Physical Volume.
+    1. You may get the following warning, this means you'll need to update the size of the Physical Volume.
 
     ```bash
     Size of logical volume /pathnoted/inpreviousstep unchanged from xx.xx GiB.
@@ -71,8 +71,8 @@ This procedures describes the steps needed to extend the drive on a Linux Ubuntu
     The filesystem is already xxxxx (4k) blocks long.  Nothing to do!
     ```
 
-    b. Run `lsblk` in order to identify the volume on which Physical Volume your drive is located on.
-    c. Run `pvresize /pathto/physicalvolume`
-    d. Run the command from step 9 again.
+    2. Run `lsblk` in order to identify the volume on which Physical Volume your drive is located on.
+    3. Run `pvresize /pathto/physicalvolume`
+    4. Run the command from step 9 again.
 
 10. Run `df -h` in order to confirm the partition was extended as expected.
