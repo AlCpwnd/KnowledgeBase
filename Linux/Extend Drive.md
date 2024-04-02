@@ -62,6 +62,7 @@ This procedures describes the steps needed to extend the drive on a Linux Ubuntu
     ```
 
 9. Run `lvresize --extents +100%FREE --resizefs /pathnoted/inpreviousstep` in order to extend the file structure.
+
     a. You may get the following warning, this means you'll need to update the size of the Physical Volume.
 
     ```bash
