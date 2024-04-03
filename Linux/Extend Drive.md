@@ -24,6 +24,11 @@ This procedures describes the steps needed to extend the drive on a Linux Ubuntu
     ```
 
 4. Run `print` in order to display the available partitions.
+
+    ```bash
+    print
+    ```
+
 5. You should then receive the following message:
 
     ```bash
@@ -40,9 +45,16 @@ This procedures describes the steps needed to extend the drive on a Linux Ubuntu
     ```
 
 7. Run `quit` in order to exit parted.
+
+    ```bash
+    quit
+    ```
+
 8. Run `lvdisplay -v` in order to show your Logical Volume information ant note your `LV Path`:
 
     ```bash
+    lvdisplay -v
+
       --- Logical volume ---
       LV Path                /dev/ubuntu-vg/ubuntu-lv  # <- This is what you need
       LV Name                ubuntu-lv
@@ -61,18 +73,36 @@ This procedures describes the steps needed to extend the drive on a Linux Ubuntu
       Block device           253:0
     ```
 
-9. Run `lvresize --extents +100%FREE --resizefs /pathnoted/inpreviousstep` in order to extend the file structure.
+9. Run the following command in order to extend the file structure.
+
+    ```bash
+    lvresize --extents +100%FREE --resizefs /pathnoted/inpreviousstep
+    ```
 
     1. You may get the following warning, this means you'll need to update the size of the Physical Volume.
 
-    ```bash
-    Size of logical volume /pathnoted/inpreviousstep unchanged from xx.xx GiB.
-    resize2fs 1.46.5 (30-Dec-2021)
-    The filesystem is already xxxxx (4k) blocks long.  Nothing to do!
-    ```
+        ```bash
+        Size of logical volume /pathnoted/inpreviousstep unchanged from xx.xx GiB.
+        resize2fs 1.46.5 (30-Dec-2021)
+        The filesystem is already xxxxx (4k) blocks long.  Nothing to do!
+        ```
 
-    2. Run `lsblk` in order to identify the volume on which Physical Volume your drive is located on.
-    3. Run `pvresize /pathto/physicalvolume`
+    2. Run the following command in order to identify the volume on which Physical Volume your drive is located on.
+
+        ```bash
+        lsblk
+        ```
+
+    3. Run
+
+        ```bash
+        pvresize /pathto/physicalvolume
+        ```
+
     4. Run the command from step 9 again.
 
-10. Run `df -h` in order to confirm the partition was extended as expected.
+10. Run the following command in order to confirm the partition was extended as expected.
+
+    ```bash
+    df -h
+    ```
