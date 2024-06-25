@@ -37,6 +37,6 @@ Install-WindowsFeature -Name 'RSAT-DFS-Mgmt-Con'
 
 > :information_source: The full script can be found [here](./Scripts/DFSR_Repair.ps1)
 
-```ps 
+```ps
 Stop-Service -Name DFSR; $ADObject = "CN=SYSVOL Subscription,CN=Domain System Volume,CN=DFSR-LocalSettings,$((Get-ADComputer -Identity $Env:COMPUTERNAME).DistinguishedName)"; Set-ADObject -Identity $ADObject -Replace @{'msDFSR-Enabled'=$false}; Set-ADObject -Identity $ADObject -Replace @{'msDFSR-options'=1}; Start-Sleep -Seconds 2; Start-Service -Name DFSR; Set-ADObject -Identity $ADObject -Replace @{'msDFSR-Enabled'=$true}; repadmin /syncall /Adp; $f = 'RSAT-DFS-Mgmt-Con'; if((Get-WindowsFeature -Name $f).InstallState -ne 'Installed'){Install-WindowsFeature -Name $f}; Start-Sleep -Seconds 2; DFSRDIAG POLLAD
 ```
