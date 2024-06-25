@@ -2,7 +2,7 @@
 
 ## Azure AD Sync Link fail
 
-When some users fail to link up with their online counterpart after configuring the Azure AD Sync.
+Force lync between a local AD user and their AAD counterpart.
 
 ## DC Private Network
 
@@ -10,11 +10,11 @@ When your domain controller's network adapter is stuck on the 'Private Network' 
 
 ## DFS Replication Errors
 
-Solution related to the DFSR Event ID 4012, where a server failed to sync with a local SYSVOL folder.
+Solution related to the DFSR Event ID 4012 on a standalone domain controller, where a server failed to sync with a local SYSVOL folder.
 
 ## DISM Offline Repair
 
-Instructions regarding the repair of an OS using DISM and a connected ISO.
+Offline repair of a Windows installation using an ISO corresponding to the installed OS.
 
 ## Failed to create Connexant Audio Factory
 
