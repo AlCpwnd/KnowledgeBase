@@ -76,7 +76,13 @@ This procedures describes the steps needed to extend the drive on a Linux Ubuntu
 9. Run the following command in order to extend the file structure.
 
     ```bash
-    lvresize --extents +100%FREE --resizefs /pathnoted/inpreviousstep
+    lvresize --extents +100%FREE --resizefs <Path found in the previous step>
+    ```
+
+    Example:
+
+    ```bash
+    lvresize --extents +100%FREE --resizefs /dev/ubuntu-vg/ubuntu-lv
     ```
 
     1. You may get the following warning, this means you'll need to update the size of the Physical Volume.
@@ -87,22 +93,51 @@ This procedures describes the steps needed to extend the drive on a Linux Ubuntu
         The filesystem is already xxxxx (4k) blocks long.  Nothing to do!
         ```
 
-    2. Run the following command in order to identify the volume on which Physical Volume your drive is located on.
+    2. Run the following command in order to identify the volume on which Physical Volume your drive is located on. (The `PV Name` value.)
 
         ```bash
-        lsblk
+        # pvdisplay
+        --- Physical volume ---
+        PV Name               /dev/sda3  # <- This is what you need
+        VG Name               ubuntu-vg
+        PV Size               <78.00 GiB / not usable 16.50 KiB
+        Allocatable           yes (but full)
+        PE Size               4.00 MiB
+        Total PE              19967
+        Free PE               0
+        Allocated PE          19967
+        PV UUID               7GwVvM-tHtx-0l5A-mDLi-fKhE-o79U-EqMn6f
+
         ```
 
     3. Run
 
         ```bash
-        pvresize /pathto/physicalvolume
+        pvresize <Path found in the previous step>
+        ```
+
+        Example:
+
+        ```bash
+        pvresize /dev/sda3
         ```
 
     4. Run the command from step 9 again.
+
+    5. If the issue remains, run the following command:
+
+        ```bash
+        lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+        ```
 
 10. Run the following command in order to confirm the partition was extended as expected.
 
     ```bash
     df -h
+    ```
+
+11. Extend the file system:
+
+    ```bash
+    resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
     ```
